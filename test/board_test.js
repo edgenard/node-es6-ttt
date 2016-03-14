@@ -44,4 +44,10 @@ describe("Board", function () {
     assert.equal(checkRows(gameBoard), "X")
   })
 
+  it("checkRows returns false if no winner", function () {
+    const gameBoard = board([0, 1, "O", "O", "O", 5, 6, "X", "X"])
+
+    assert.equal(checkRows(gameBoard), false)
+  })
+
 })

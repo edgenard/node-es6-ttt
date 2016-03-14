@@ -4,8 +4,10 @@
   "description": "A command line tic-tac-toe game written in ES2015",
   "main": "game.js",
   "scripts": {
-    "test": "",
-    "build": ""
+    "test": "mocha --compilers js:babel-register -- test/",
+    "build": "browserify lib/game.js -t babelify -o game_build.js",
+    "preplay": "npm run build",
+    "play": "node  game_build.js"
   },
   "author": "Emmanuel Genard",
   "license": "ISC",

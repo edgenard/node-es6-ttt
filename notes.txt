@@ -1,17 +1,7 @@
 
  - pickPosition function takes player and board and outputs a position to place a marker
- - makeMove function takes in a position, marker and board and produces a new board
+ - placeMark function takes in a position, marker and board and produces a new board
  - player has a function to pick a board position.
  - If a human player need a function to ask player for move and to handle error messages
  - UI is  function that prints to the console. (Side Effect)
  - Need a message object that takes in certain things and produces messages to print to the console.
-
-
-
- Where to start?
-
- What does board object need? How to represent the board?
-
- Instead of mutating board.state maybe I should just create a new board each time?
-
- Have a function that takes in a board and a position to move and outputs a new board.

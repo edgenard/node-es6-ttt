@@ -1,6 +1,6 @@
 
 import {assert} from "chai"
-import {board, placeMark} from "../lib/board.js"
+import {board, placeMark, checkRows} from "../lib/board.js"
 
 describe("Board", function () {
   it("board is an array", function () {
@@ -24,6 +24,12 @@ describe("Board", function () {
       mark: "O"
     })
     assert.deepEqual(newBoard, [0, 1, 2, 3, "X", 5, 6, 7, 8] )
+  })
+
+  it("checkRows returns the winning mark for top row", function () {
+    const gameBoard = board(["X", "X", "X", 3, 4, 5, 6, 7, 8])
+
+    assert.equal(checkRows(gameBoard), "X")
   })
 
 })

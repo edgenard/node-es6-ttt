@@ -1,0 +1,18 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "eqeqeq": 2,
+    "no-console": 0,
+    "no-debugger": 1,
+    "no-unused-vars": 0
+  },
+
+  "env": {
+    "node": 1,
+    "mocha": 1
+    }
+}

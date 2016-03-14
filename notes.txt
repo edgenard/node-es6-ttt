@@ -1,7 +1,4 @@
+- 
 
- - pickPosition function takes player and board and outputs a position to place a marker
- - placeMark function takes in a position, marker and board and produces a new board
- - player has a function to pick a board position.
- - If a human player need a function to ask player for move and to handle error messages
- - UI is  function that prints to the console. (Side Effect)
- - Need a message object that takes in certain things and produces messages to print to the console.
+
+ - checkColumns will work just like checkRows but for columns

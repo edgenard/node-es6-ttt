@@ -38,4 +38,10 @@ describe("Board", function () {
     assert.equal(checkRows(gameBoard), "O")
   })
 
+  it("checkRows returns winning mark for bottom row", function () {
+    const gameBoard = board([0, 1, 2, 3, 4, 5, "X", "X", "X"])
+
+    assert.equal(checkRows(gameBoard), "X")
+  })
+
 })

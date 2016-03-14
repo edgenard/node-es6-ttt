@@ -11,3 +11,7 @@
  Where to start?
 
  What does board object need? How to represent the board?
+
+ Instead of mutating board.state maybe I should just create a new board each time?
+
+ Have a function that takes in a board and a position to move and outputs a new board.

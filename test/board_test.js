@@ -56,4 +56,10 @@ describe("Board", function () {
     assert.equal(checkColumns(gameBoard), "O")
   })
 
+  it("checkColumns returns false if no winner", function () {
+    const gameBoard = board([[0, 1, "O"], ["O", "O", 5], [6, "X", "X"]])
+
+    assert.equal(checkColumns(gameBoard), false)
+  })
+
 })

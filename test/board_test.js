@@ -1,6 +1,6 @@
 
 import {assert} from "chai"
-import {board, placeMark, checkRows, checkColumns} from "../lib/board.js"
+import {board, placeMark, checkRows, checkColumns, formatBoard} from "../lib/board.js"
 
 describe("Board", function () {
   it("board returns an object", function () {
@@ -60,6 +60,19 @@ describe("Board", function () {
     const gameBoard = board([[0, 1, "O"], ["O", "O", 5], [6, "X", "X"]])
 
     assert.equal(checkColumns(gameBoard), false)
+  })
+
+  it("formatBoard returns string", function () {
+    const gameBoard = board()
+
+    assert.isString(formatBoard(gameBoard))
+  })
+
+  it("formatBoard returns a string rep of board", function () {
+    const gameBoard = board([[0, 1, 2], [3, "X", 5], [6, 7, 8]])
+
+    assert.equal(formatBoard(gameBoard),
+    `0 | 1 | 2\n3 | X | 5\n6 | 7 | 8\n`)
   })
 
 })

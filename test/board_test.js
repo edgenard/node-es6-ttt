@@ -71,8 +71,7 @@ describe("Board", function () {
   it("formatBoard returns a string rep of board", function () {
     const gameBoard = board([[0, 1, 2], [3, "X", 5], [6, 7, 8]])
 
-    assert.equal(formatBoard(gameBoard),
-    `0 | 1 | 2\n3 | X | 5\n6 | 7 | 8\n`)
+    assert.equal(formatBoard(gameBoard), `0 | 1 | 2\n3 | X | 5\n6 | 7 | 8\n`)
   })
 
 })

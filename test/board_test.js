@@ -1,6 +1,6 @@
 
 import {assert} from "chai"
-import {board, placeMark, checkRows} from "../lib/board.js"
+import {board, placeMark, checkRows, checkColumns} from "../lib/board.js"
 
 describe("Board", function () {
   it("board returns an object", function () {
@@ -48,6 +48,12 @@ describe("Board", function () {
     const gameBoard = board([[0, 1, "O"], ["O", "O", 5], [6, "X", "X"]])
 
     assert.equal(checkRows(gameBoard), false)
+  })
+
+  it("checkColumns returns winner", function () {
+    const gameBoard = board([[0, "O", 2], [3, "O", 5], [6, "O", 7]])
+
+    assert.equal(checkColumns(gameBoard), "O")
   })
 
 })

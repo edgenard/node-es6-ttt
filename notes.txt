@@ -1,4 +1,2 @@
-- 
 
-
- - checkColumns will work just like checkRows but for columns
+- checkColumns will work just like checkRows but for columns

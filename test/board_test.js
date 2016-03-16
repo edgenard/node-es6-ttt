@@ -1,6 +1,12 @@
 
 import {assert} from "chai"
-import {board, placeMark, checkRows, checkColumns, formatBoard} from "../lib/board.js"
+import {
+  board,
+  placeMark,
+  checkRows,
+  checkColumns,
+  checkDiagonals,
+  formatBoard} from "../lib/board.js"
 
 describe("Board", function () {
 
@@ -56,6 +62,18 @@ describe("Board", function () {
     const gameBoard = board([[0, 1, "O"], ["O", "O", 5], [6, "X", "X"]])
 
     assert.equal(checkColumns(gameBoard), false)
+  })
+
+  it("checkDiagonals returns a winner",function () {
+    const gameBoard = board([["X", 1, 2], [3, "X", 5], [6, 7, "X"]])
+
+    assert.equal(checkDiagonals(gameBoard), "X")
+  })
+
+  it("checkDiagonals returns false if no winner",function () {
+    const gameBoard = board([["O", 1, 2], [3, "X", 5], [6, 7, "O"]])
+
+    assert.isFalse(checkDiagonals(gameBoard))
   })
 
   it("formatBoard returns a string rep of board", function () {

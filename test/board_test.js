@@ -6,7 +6,9 @@ import {
   checkRows,
   checkColumns,
   checkDiagonals,
-  formatBoard} from "../lib/board.js"
+  possibleMoves,
+  formatBoard,
+  validateInput} from "../lib/board.js"
 
 describe("Board", function () {
 
@@ -76,10 +78,24 @@ describe("Board", function () {
     assert.isFalse(checkDiagonals(gameBoard))
   })
 
+  it("possibleMoves returns an array of possible moves", function () {
+    const gameBoard = board([["O", 1, 2], [3, "X", 5], [6, 7, "O"]])
+
+    assert.deepEqual(possibleMoves(gameBoard), [1, 2, 3, 5, 6, 7])
+  })
+
   it("formatBoard returns a string rep of board", function () {
     const gameBoard = board([[0, 1, 2], [3, "X", 5], [6, 7, 8]])
 
     assert.equal(formatBoard(gameBoard), `0 | 1 | 2\n3 | X | 5\n6 | 7 | 8\n`)
+  })
+
+  it("validateInput returns true for valid input", function () {
+    const gameBoard = board([["O", 1, 2], [3, "X", 5], [6, 7, "O"]])
+    const emptyPositions = possibleMoves(gameBoard)
+    const choice = 3
+
+    assert.isTrue(validateInput(emptyPositions, choice))
   })
 
 })

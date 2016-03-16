@@ -1,2 +1,3 @@
-- A function that takes the board and returns possible moves
-- A function that takes in a message and possible values and gets user input.
+- validateInput takes in possible moves and user input and returns true or false.
+- A function that takes in a message and possible values and gets user input it
+returns what the user chose.

@@ -62,12 +62,6 @@ describe("Board", function () {
     assert.equal(checkColumns(gameBoard), false)
   })
 
-  it("formatBoard returns string", function () {
-    const gameBoard = board()
-
-    assert.isString(formatBoard(gameBoard))
-  })
-
   it("formatBoard returns a string rep of board", function () {
     const gameBoard = board([[0, 1, 2], [3, "X", 5], [6, 7, 8]])
 

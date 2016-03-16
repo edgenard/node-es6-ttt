@@ -3,10 +3,6 @@ import {assert} from "chai"
 import {board, placeMark, checkRows, checkColumns, formatBoard} from "../lib/board.js"
 
 describe("Board", function () {
-  it("board returns an object", function () {
-
-  assert.isObject(board())
-  })
 
   it("board defaults to numbers 0 to 8", function () {
     assert.deepEqual(board().state, [[0, 1, 2], [3, 4, 5], [6, 7, 8]])

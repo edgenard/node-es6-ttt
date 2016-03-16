@@ -1,1 +1,6 @@
-- 
+- A function that takes the board and returns possible moves
+- A function that checks for diagonal win
+- A function that takes in a message and possible values and gets user input.
+
+
+Refactor board to just be 2d array

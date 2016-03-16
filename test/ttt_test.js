@@ -9,7 +9,7 @@ import {
   possibleMoves,
   formatBoard,
   validateInput,
-  getUserMove} from "../lib/board.js"
+  getUserMove} from "../lib/ttt.js"
 
 describe("Board", function () {
 

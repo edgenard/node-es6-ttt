@@ -5,7 +5,7 @@
   "main": "game.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register -- test/",
-    "build": "babel lib/game.js  -o game_build.js",
+    "build": "babel lib/ttt.js  -o ttt_compiled.js",
     "preplay": "npm run build",
     "play": "node  game_build.js"
   },

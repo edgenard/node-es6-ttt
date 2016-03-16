@@ -1,3 +1,6 @@
 node_modules/fsevents/lib/
 
 node_modules/.bin/
+
+#Ignore compiled game
+ttt_compiled.js

@@ -5,12 +5,12 @@ import {board, placeMark, checkRows, checkColumns, formatBoard} from "../lib/boa
 describe("Board", function () {
 
   it("board defaults to numbers 0 to 8", function () {
-    assert.deepEqual(board().state, [[0, 1, 2], [3, 4, 5], [6, 7, 8]])
+    assert.deepEqual(board(), [[0, 1, 2], [3, 4, 5], [6, 7, 8]])
   })
 
   it("placeMark puts mark and produces a new board",function () {
     const newBoard = placeMark({currentBoard: board(), position: 4, mark: "X"} )
-    assert.deepEqual(newBoard.state, [[0, 1, 2], [3, "X", 5], [6, 7, 8]])
+    assert.deepEqual(newBoard, [[0, 1, 2], [3, "X", 5], [6, 7, 8]])
   })
 
   it("placeMark returns board unchanged if spot is filled", function () {
@@ -19,7 +19,7 @@ describe("Board", function () {
       position: 4,
       mark: "O"
     })
-    assert.deepEqual(newBoard.state, [[0, 1, 2], [3, "X", 5], [6, 7, 8]] )
+    assert.deepEqual(newBoard, [[0, 1, 2], [3, "X", 5], [6, 7, 8]] )
   })
 
   it("checkRows returns the winning mark for top row", function () {

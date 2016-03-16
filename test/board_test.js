@@ -8,7 +8,8 @@ import {
   checkDiagonals,
   possibleMoves,
   formatBoard,
-  validateInput} from "../lib/board.js"
+  validateInput,
+  getUserMove} from "../lib/board.js"
 
 describe("Board", function () {
 

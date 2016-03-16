@@ -1,3 +1,1 @@
-- validateInput takes in possible moves and user input and returns true or false.
-- A function that takes in a message and possible values and gets user input it
-returns what the user chose.
+- A function that asks takes in a message and returns user input.

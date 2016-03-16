@@ -7,7 +7,7 @@
     "test": "mocha --compilers js:babel-register -- test/",
     "build": "babel lib/ttt.js  -o ttt_compiled.js",
     "preplay": "npm run build",
-    "play": "node  game_build.js"
+    "play": "node  ttt_compiled.js"
   },
   "author": "Emmanuel Genard",
   "license": "ISC",

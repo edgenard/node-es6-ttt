@@ -93,9 +93,17 @@ describe("Board", function () {
   it("validateInput returns true for valid input", function () {
     const gameBoard = board([["O", 1, 2], [3, "X", 5], [6, 7, "O"]])
     const emptyPositions = possibleMoves(gameBoard)
-    const choice = 3
+    const choice = "3"
 
     assert.isTrue(validateInput(emptyPositions, choice))
+  })
+
+  it("validateInput returns false for invalid input", function () {
+    const gameBoard = board([["O", 1, 2], [3, "X", 5], [6, 7, "O"]])
+    const emptyPositions = possibleMoves(gameBoard)
+    const choice = "4"
+
+    assert.isFalse(validateInput(emptyPositions, choice))
   })
 
 })

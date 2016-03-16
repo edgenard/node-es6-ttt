@@ -1,1 +1,4 @@
 - A function that asks takes in a message and returns user input.
+ Figure out how to use promises.
+ Figure out how to mock stdin(maybe?)
+ How to test the user interaction?

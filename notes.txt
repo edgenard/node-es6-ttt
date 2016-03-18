@@ -1,4 +1,6 @@
 - A function that asks takes in a message and returns user input.
+A function that uses process.stdin and process.stdout to read and write a stream
+Use a stub and check how many times it has been called. 
  Figure out how to use promises.
  Figure out how to mock stdin(maybe?)
  How to test the user interaction?

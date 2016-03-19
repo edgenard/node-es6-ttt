@@ -1,5 +1,6 @@
 
 import {assert} from "chai"
+import {stdin} from "mock-stdin"
 import {
   board,
   placeMark,
@@ -9,7 +10,8 @@ import {
   possibleMoves,
   formatBoard,
   validateInput,
-  getUserMove} from "../lib/ttt.js"
+  getUserMove,
+  input} from "../lib/ttt.js"
 
 describe("Board", function () {
 
@@ -105,6 +107,14 @@ describe("Board", function () {
     const choice = "4"
 
     assert.isFalse(validateInput(emptyPositions, choice))
+  })
+
+  it("input captures user input", function () {
+    const mock_stdin = stdin()
+
+    process.nextTick(() => mock_stdin.send("input"))
+    
+    return input().then((response) => assert.equal(response, "input"))
   })
 
 })

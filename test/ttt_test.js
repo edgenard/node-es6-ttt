@@ -11,7 +11,8 @@ import {
   formatBoard,
   validateInput,
   getUserMove,
-  input} from "../lib/ttt.js"
+  input,
+  player} from "../lib/ttt.js"
 
 describe("Board", function () {
 
@@ -113,8 +114,13 @@ describe("Board", function () {
     const mock_stdin = stdin()
 
     process.nextTick(() => mock_stdin.send("input"))
-    
+
     return input().then((response) => assert.equal(response, "input"))
+  })
+
+  it("player function returns an object", function () {
+
+    assert.isObject(player())
   })
 
 })

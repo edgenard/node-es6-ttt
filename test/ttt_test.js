@@ -118,9 +118,10 @@ describe("Board", function () {
     return input().then((response) => assert.equal(response, "input"))
   })
 
-  it("player function returns an object", function () {
+  it("player has a mark", function () {
+    const currentPlayer = player({mark:"X"})
 
-    assert.isObject(player())
+    assert.equal(currentPlayer.mark, "X")
   })
 
 })

@@ -146,4 +146,10 @@ describe("Board", function () {
   "Bad Choice! Please choose one of the following empty spaces: 1, 2, 3, 5, 6, 7")
   })
 
+  it("has message to choose mark", function () {
+    const game_messages = messages()
+
+    assert.equal(game_messages.chooseMark(), "Please choose the mark for player 1. X or O")
+  })
+
 })

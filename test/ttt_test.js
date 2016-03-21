@@ -136,8 +136,8 @@ describe("Board", function () {
     assert.equal(currentPlayer.mark, "X")
   })
 
-  it("player is human", function () {
-    const currentPlayer = player({mark: "X", human: true})
+  it("player is human by default", function () {
+    const currentPlayer = player({mark: "X"})
 
     assert.isTrue(currentPlayer.human)
   })

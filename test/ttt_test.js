@@ -156,7 +156,7 @@ describe("Board", function () {
     const game_messages = messages()
 
     assert.equal(game_messages.invalidInput(possibleMoves(game_board)),
-  "Bad Choice! Please choose one of the following empty spaces: 1, 2, 3, 5, 6, 7")
+  "Bad Choice! Please choose one of the following: 1, 2, 3, 5, 6, 7")
   })
 
   it("has message to choose mark", function () {

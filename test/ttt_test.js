@@ -12,7 +12,8 @@ import {
   validateInput,
   getUserMove,
   input,
-  player} from "../lib/ttt.js"
+  player,
+  messages} from "../lib/ttt.js"
 
 describe("Board", function () {
 
@@ -128,6 +129,13 @@ describe("Board", function () {
     const currentPlayer = player({mark: "X", human: true})
 
     assert.isTrue(currentPlayer.human)
+  })
+
+
+  it("there is a welcome message", function () {
+    const game_messages = messages()
+
+    assert.equal(game_messages.welcome(), "Welcome to Node CLI Tic-Tac-Toe")
   })
 
 })

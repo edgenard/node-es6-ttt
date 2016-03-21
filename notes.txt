@@ -1,7 +1,5 @@
-What is the player function?
-  - It needs a mark
-  - When playing I need to ask player 1 then player 2, how will this be handled?
-  - Can player be just data like the board, maybe a string representing the mark?
-  - If it is just data, what does this mean for computer player?
-  - Can the player function use all the other functions?
-  - 
+What is the gameLoop?
+- How do we start the game? With a message?
+- Can I/Should I test this?
+- What would a test look like? Mocking stdout?
+- 

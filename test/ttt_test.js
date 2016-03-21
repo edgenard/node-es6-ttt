@@ -138,7 +138,7 @@ describe("Board", function () {
   it("there is a welcome message", function () {
     const game_messages = messages()
 
-    assert.equal(game_messages.welcome(), "Welcome to Node CLI Tic-Tac-Toe")
+    assert.equal(game_messages.welcome(), "Welcome to Node CLI Tic-Tac-Toe\n")
   })
 
   it("has invalid input message", function () {
@@ -146,20 +146,20 @@ describe("Board", function () {
     const game_messages = messages()
 
     assert.equal(game_messages.invalidInput(possibleMoves(game_board)),
-  "Bad Choice! Please choose one of the following: 1, 2, 3, 5, 6, 7")
+  "Bad Choice! Please choose one of the following: 1, 2, 3, 5, 6, 7\n")
   })
 
   it("has message to choose mark", function () {
     const game_messages = messages()
 
-    assert.equal(game_messages.chooseMark(), "Please choose the mark for player 1. X or O")
+    assert.equal(game_messages.chooseMark(), "Please choose the mark for player 1. X or O\n")
   })
 
   it("has message to choose empty spot", function () {
     const game_messages = messages()
     const game_board = board([["O", 1, 2], [3, "X", 5], [6, 7, "O"]])
 
-    assert.equal(game_messages.chooseSpot(possibleMoves(game_board)),"Please choose one of the following empty spots: 1, 2, 3, 5, 6, 7" )
+    assert.equal(game_messages.chooseSpot(possibleMoves(game_board)),"Please choose one of the following empty spots: 1, 2, 3, 5, 6, 7\n" )
   })
 
 })

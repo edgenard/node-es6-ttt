@@ -108,7 +108,7 @@ describe("Board", function () {
     const emptyPositions = possibleMoves(gameBoard)
     const choice = "3"
 
-    assert.isTrue(validateInput(emptyPositions, choice))
+    assert.isTrue(validateInput(emptyPositions, Number(choice)))
   })
 
   it("validateInput returns false for invalid input", function () {
@@ -116,7 +116,12 @@ describe("Board", function () {
     const emptyPositions = possibleMoves(gameBoard)
     const choice = "4"
 
-    assert.isFalse(validateInput(emptyPositions, choice))
+    assert.isFalse(validateInput(emptyPositions, Number(choice)))
+  })
+
+  it("validateInput checks for X or O", function () {
+
+    assert.isTrue(validateInput(["X", "O"], "X"))
   })
 
   it("input captures user input", function () {

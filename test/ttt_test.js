@@ -138,4 +138,12 @@ describe("Board", function () {
     assert.equal(game_messages.welcome(), "Welcome to Node CLI Tic-Tac-Toe")
   })
 
+  it("has invalid input message", function () {
+    const game_board = board([["O", 1, 2], [3, "X", 5], [6, 7, "O"]])
+    const game_messages = messages()
+
+    assert.equal(game_messages.invalidInput(possibleMoves(game_board)),
+  "Bad Choice! Please choose one of the following empty spaces: 1, 2, 3, 5, 6, 7")
+  })
+
 })

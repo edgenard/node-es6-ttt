@@ -13,7 +13,8 @@ import {
   getUserMove,
   input,
   player,
-  messages} from "../lib/ttt.js"
+  messages,
+  winner} from "../lib/ttt.js"
 
 describe("Board", function () {
 
@@ -81,6 +82,13 @@ describe("Board", function () {
     const gameBoard = board([["O", 1, 2], [3, "X", 5], [6, 7, "O"]])
 
     assert.isFalse(checkDiagonals(gameBoard))
+  })
+
+  it("winner returns winning mark", function () {
+    const gameBoard = board([["X", 1, 2], [3, "X", 5], [6, 7, "X"]])
+
+    assert.equal(winner(gameBoard), "X")
+
   })
 
   it("possibleMoves returns an array of possible moves", function () {

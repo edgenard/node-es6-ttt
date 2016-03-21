@@ -10,6 +10,7 @@ import {
   possibleMoves,
   formatBoard,
   validateInput,
+  getInput,
   player,
   messages,
   winner} from "../lib/ttt.js"
@@ -99,6 +100,13 @@ describe("Board", function () {
     const gameBoard = board([[0, 1, 2], [3, "X", 5], [6, 7, 8]])
 
     assert.equal(formatBoard(gameBoard), `0 | 1 | 2\n3 | X | 5\n6 | 7 | 8\n`)
+  })
+
+  it("input captures user input", function () {
+    const mockStdin = stdin()
+    process.nextTick(() => mockStdin.send("input"))
+
+    return getInput("Please say input").then((response) => assert.equal(response, "input"))
   })
 
   it("validateInput returns true for valid input", function () {

@@ -152,4 +152,11 @@ describe("Board", function () {
     assert.equal(game_messages.chooseMark(), "Please choose the mark for player 1. X or O")
   })
 
+  it("has message to choose empty spot", function () {
+    const game_messages = messages()
+    const game_board = board([["O", 1, 2], [3, "X", 5], [6, 7, "O"]])
+
+    assert.equal(game_messages.chooseSpot(possibleMoves(game_board)),"Please choose one of the following empty spots: 1, 2, 3, 5, 6, 7" )
+  })
+
 })

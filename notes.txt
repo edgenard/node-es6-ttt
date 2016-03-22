@@ -1,1 +1,2 @@
-I can update game data to have all the functions that could change data and have it return me a new gameData object.
+
+Choose returns the rl which returns a gamestate

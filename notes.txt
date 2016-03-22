@@ -1,5 +1,1 @@
-What is the gameLoop?
-- How do we start the game? With a message?
-- Can I/Should I test this?
-- What would a test look like? Mocking stdout?
-- 
+I can update game data to have all the functions that could change data and have it return me a new gameData object.

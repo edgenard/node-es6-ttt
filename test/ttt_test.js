@@ -172,4 +172,9 @@ describe("Board", function () {
     assert.equal(gameMessages.tie(), "It's a tie.\n")
   })
 
+  it("has a message to ask for type of game", function () {
+    assert.equal(gameMessages.gameType(),
+    `Choose 1 for human vs human game\nChoose 2 for human vs computer game\nChoose 3 for computer vs computer game`)
+  })
+
 })

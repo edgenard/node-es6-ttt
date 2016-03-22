@@ -160,4 +160,8 @@ describe("Board", function () {
     assert.equal(gameMessages.chooseSpot(possibleMoves(gameBoard)),"Please choose one of the following empty spots: 1, 2, 3, 5, 6, 7\n" )
   })
 
+  it("has a message to announce winner", function () {
+    assert.equal(gameMessages.winner("X"), "X has won!\n")
+  })
+
 })

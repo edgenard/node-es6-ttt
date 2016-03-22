@@ -168,4 +168,8 @@ describe("Board", function () {
     assert.equal(gameMessages.turn("O"), "It is O's turn\n")
   })
 
+  it("has a message for announcing tie", function () {
+    assert.equal(gameMessages.tie(), "It's a tie.\n")
+  })
+
 })

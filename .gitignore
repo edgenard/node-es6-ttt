@@ -4,3 +4,6 @@ node_modules/.bin/
 
 #Ignore compiled game
 ttt_compiled.js
+
+#Ignore notes
+notes.text

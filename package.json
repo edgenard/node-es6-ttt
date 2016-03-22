@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A command line tic-tac-toe game written in ES2015",
   "scripts": {
-    "test": "mocha --compilers js:babel-register -- test/",
+    "test": "mocha --compilers js:babel-register  lib/ttt_test.js ",
     "build": "babel lib/ttt.js  -o ttt_compiled.js",
     "preplay": "npm run build",
     "play": "node  ttt_compiled.js"

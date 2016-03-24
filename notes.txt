@@ -1,2 +1,0 @@
-
-Choose returns the rl which returns a gamestate
